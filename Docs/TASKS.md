@@ -22,8 +22,8 @@
 ---
 
 ## TAREFA 02: Schema SQL Completo (Banco de Dados)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 11-09-2026 23:50
 - **Data de conclusão**: —
 - **Descrição**: Criar todas as tabelas, relacionamentos e índices no Supabase PostgreSQL
 - **Subtarefas**:
@@ -286,8 +286,8 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 14 |
-| 🟡 INICIADO | 0 |
+| 🔴 PENDENTE | 13 |
+| 🟡 INICIADO | 1 |
 | 🟠 EM ANDAMENTO | 0 |
 | 🟢 CONCLUÍDO | 1 |
 | ⚫ CANCELADO | 0 |
@@ -295,7 +295,7 @@
 
 **Taxa de conclusão**: 6.7% (1/15)  
 **Tempo para primeira conclusão**: ~30 minutos  
-**Próxima**: TAREFA 02 - Schema SQL Completo
+**Próxima em progresso**: TAREFA 02 - Schema SQL Completo
 
 ---
 

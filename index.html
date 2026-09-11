@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvard In Box AI - Educação Personalizada com IA</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 24px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .role-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .role-card:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: translateY(-3px);
+        }
+
+        .role-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span style="font-size: 28px;">📚</span>
+                <h1 class="text-2xl font-bold gradient-text">Harvard In Box AI</h1>
+            </div>
+            <div class="flex gap-4">
+                <button class="btn-primary" onclick="showLoginModal()">Login</button>
+                <button class="btn-primary" onclick="showSignupModal()">Cadastro</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="text-white text-center py-16 px-6">
+        <h2 class="text-5xl font-bold mb-4">Educação Personalizada com IA</h2>
+        <p class="text-xl mb-8 opacity-90">
+            Torne-se autodidata em qualquer assunto. Gratuito. Poderoso. Inteligente.
+        </p>
+        <button class="btn-primary" onclick="showSignupModal()">Começar Agora</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <!-- Dashboard Section -->
+        <div class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-2">Bem-vindo ao Harvard In Box AI 🎓</h2>
+                <p class="text-gray-600 mb-8">
+                    Escolha um papel de IA para começar sua jornada de aprendizado personalizado.
+                    Cada papel é especializado em ajudá-lo de uma forma diferente.
+                </p>
+
+                <!-- The 6 AI Roles -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Advisor -->
+                    <div class="role-card" onclick="selectRole('advisor')">
+                        <div class="role-icon">🎯</div>
+                        <h3 class="font-bold text-lg mb-2">Advogado</h3>
+                        <p class="text-gray-600 text-sm">
+                            Constrói seu currículo personalizado com base em suas respostas
+                        </p>
+                    </div>
+
+                    <!-- Tutor -->
+                    <div class="role-card" onclick="selectRole('tutor')">
+                        <div class="role-icon">🎓</div>
+                        <h3 class="font-bold text-lg mb-2">Tutor</h3>
+                        <p class="text-gray-600 text-sm">
+                            Diagnostica lacunas no seu aprendizado através de perguntas precisas
+                        </p>
+                    </div>
+
+                    <!-- Librarian -->
+                    <div class="role-card" onclick="selectRole('librarian')">
+                        <div class="role-icon">📚</div>
+                        <h3 class="font-bold text-lg mb-2">Bibliotecário</h3>
+                        <p class="text-gray-600 text-sm">
+                            Encontra as melhores 3-4 fontes para você aprender (sinal vs. ruído)
+                        </p>
+                    </div>
+
+                    <!-- Editor -->
+                    <div class="role-card" onclick="selectRole('editor')">
+                        <div class="role-icon">✂️</div>
+                        <h3 class="font-bold text-lg mb-2">Editor</h3>
+                        <p class="text-gray-600 text-sm">
+                            Revisa seus trabalhos e oferece feedback estruturado
+                        </p>
+                    </div>
+
+                    <!-- Companion -->
+                    <div class="role-card" onclick="selectRole('companion')">
+                        <div class="role-icon">🧭</div>
+                        <h3 class="font-bold text-lg mb-2">Companheiro</h3>
+                        <p class="text-gray-600 text-sm">
+                            Cruza disciplinas para trazer perspectivas inesperadas
+                        </p>
+                    </div>
+
+                    <!-- Automation -->
+                    <div class="role-card" onclick="selectRole('automation')">
+                        <div class="role-icon">⚙️</div>
+                        <h3 class="font-bold text-lg mb-2">Automação</h3>
+                        <p class="text-gray-600 text-sm">
+                            Conecta seu plano ao Google Calendar e Google Docs automaticamente
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="card">
+                <div style="font-size: 32px; margin-bottom: 12px;">🤖</div>
+                <h3 class="font-bold text-lg mb-2">Múltiplos Modelos de IA</h3>
+                <p class="text-gray-600">
+                    Escolha entre Claude, GPT-4 ou Gemini. Use o que funciona melhor para você.
+                </p>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 32px; margin-bottom: 12px;">🎯</div>
+                <h3 class="font-bold text-lg mb-2">Educação Personalizada</h3>
+                <p class="text-gray-600">
+                    Currículo customizado baseado na sua base de conhecimento e objetivos.
+                </p>
+            </div>
+
+            <div class="card">
+                <div style="font-size: 32px; margin-bottom: 12px;">⚡</div>
+                <h3 class="font-bold text-lg mb-2">Rápido e Eficiente</h3>
+                <p class="text-gray-600">
+                    Sem videos chatos. Sem cursos infinitos. Direto ao ponto que importa.
+                </p>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="card mb-12">
+            <h2 class="text-2xl font-bold mb-8 text-center">Por que isso funciona?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">88%</div>
+                    <p class="text-gray-600">das pessoas desistem de cursos online tradicionais</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">98%</div>
+                    <p class="text-gray-600">de alunos com tutoria individual superam turmas convencionais</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                    <p class="text-gray-600">seu tutor de IA disponível sempre que você precisar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="card bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center py-12">
+            <h2 class="text-3xl font-bold mb-4">Pronto para começar?</h2>
+            <p class="text-lg mb-8 opacity-90">
+                Crie sua conta agora e comece a aprender com IA de forma inteligente.
+            </p>
+            <button class="bg-white text-purple-600 font-bold py-3 px-8 rounded-lg hover:scale-105 transition"
+                    onclick="showSignupModal()">
+                Cadastrar Agora
+            </button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" onclick="closeLoginModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Login</h2>
+                <button onclick="closeLoginModal()" style="font-size: 24px; cursor: pointer;">×</button>
+            </div>
+
+            <form onsubmit="handleLogin(event)">
+                <input type="email" placeholder="Email" class="input-field" required>
+                <input type="password" placeholder="Senha" class="input-field" required>
+                <button type="submit" class="btn-primary w-full mt-4">Entrar</button>
+            </form>
+
+            <p class="text-center text-gray-600 mt-4">
+                Não tem conta? <a href="#" onclick="switchToSignup()" class="text-purple-600 font-bold">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal" onclick="closeSignupModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Cadastro</h2>
+                <button onclick="closeSignupModal()" style="font-size: 24px; cursor: pointer;">×</button>
+            </div>
+
+            <form onsubmit="handleSignup(event)">
+                <input type="text" placeholder="Nome Completo" class="input-field" required>
+                <input type="email" placeholder="Email" class="input-field" required>
+                <input type="password" placeholder="Senha (mín. 6 caracteres)" class="input-field" required>
+                <input type="password" placeholder="Confirmar Senha" class="input-field" required>
+                <button type="submit" class="btn-primary w-full mt-4">Cadastrar</button>
+            </form>
+
+            <p class="text-center text-gray-600 mt-4">
+                Já tem conta? <a href="#" onclick="switchToLogin()" class="text-purple-600 font-bold">Faça login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Role Selection Modal -->
+    <div id="roleModal" class="modal" onclick="closeRoleModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold" id="roleTitle">Selecionar Papel</h2>
+                <button onclick="closeRoleModal()" style="font-size: 24px; cursor: pointer;">×</button>
+            </div>
+
+            <div id="roleContent"></div>
+
+            <div class="mt-8 flex gap-4">
+                <button class="btn-primary flex-1" onclick="startWithRole()">Começar</button>
+                <button class="border-2 border-gray-300 flex-1 rounded-lg font-bold py-2" onclick="closeRoleModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-600">
+            <p>&copy; 2026 Harvard In Box AI. Educação personalizada com IA para todos.</p>
+            <p class="mt-2 text-sm">
+                <a href="#" class="hover:text-purple-600">Termos</a> •
+                <a href="#" class="hover:text-purple-600">Privacidade</a> •
+                <a href="#" class="hover:text-purple-600">Contato</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Functions
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.add('active');
+        }
+
+        function closeLoginModal(event) {
+            if (!event || event.target.id === 'loginModal') {
+                document.getElementById('loginModal').classList.remove('active');
+            }
+        }
+
+        function showSignupModal() {
+            document.getElementById('signupModal').classList.add('active');
+        }
+
+        function closeSignupModal(event) {
+            if (!event || event.target.id === 'signupModal') {
+                document.getElementById('signupModal').classList.remove('active');
+            }
+        }
+
+        function switchToSignup() {
+            closeLoginModal();
+            showSignupModal();
+        }
+
+        function switchToLogin() {
+            closeSignupModal();
+            showLoginModal();
+        }
+
+        // Role Selection
+        const roles = {
+            advisor: {
+                title: '🎯 Advogado',
+                description: 'Construtor de Currículo',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        O Advogado vai fazer 5 perguntas para entender:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Seu destino (o que quer aprender?)</li>
+                        <li>Sua base atual (onde você está?)</li>
+                        <li>A sequência ideal (em que ordem?)</li>
+                        <li>O que ignorar por agora</li>
+                        <li>Milestones semanais</li>
+                    </ul>
+                `
+            },
+            tutor: {
+                title: '🎓 Tutor',
+                description: 'Diagnóstico de Lacunas',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        O Tutor não explica. O Tutor pergunta.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Ele diagnostica exatamente qual é sua confusão e faz uma pergunta de cada vez até você entender.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        Funciona melhor em modo voz, mas também funciona por texto.
+                    </p>
+                `
+            },
+            librarian: {
+                title: '📚 Bibliotecário',
+                description: 'Curador de Fontes',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        O Bibliotecário encontra as 3-4 melhores fontes para você:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Livros de autoridade reconhecida</li>
+                        <li>Cursos online de qualidade</li>
+                        <li>Podcasts especializados</li>
+                        <li>Papers científicos</li>
+                    </ul>
+                `
+            },
+            editor: {
+                title: '✂️ Editor',
+                description: 'Revisor de Trabalhos',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        O Editor revisa seus trabalhos e oferece feedback estruturado:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Desafia sua lógica</li>
+                        <li>Encontra fraquezas no argumento</li>
+                        <li>Melhora estrutura e clareza</li>
+                        <li>Feedback linha por linha</li>
+                    </ul>
+                `
+            },
+            companion: {
+                title: '🧭 Companheiro',
+                description: 'Perspectiva Interdisciplinar',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        O Companheiro cruza sua área com outras disciplinas.
+                    </p>
+                    <p class="text-gray-600">
+                        Faz perguntas como: "Como isso se relaciona com X?" para trazer perspectivas inesperadas.
+                    </p>
+                `
+            },
+            automation: {
+                title: '⚙️ Automação',
+                description: 'Google Calendar & Docs',
+                content: `
+                    <p class="text-gray-600 mb-4">
+                        A Automação conecta seu plano de estudo a ferramentas que você já usa:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Cria eventos no Google Calendar</li>
+                        <li>Salva plano em Google Docs formatado</li>
+                        <li>Agenda lembretes automáticos</li>
+                        <li>Acompanha seu progresso</li>
+                    </ul>
+                `
+            }
+        };
+
+        let selectedRole = null;
+
+        function selectRole(role) {
+            selectedRole = role;
+            const roleData = roles[role];
+
+            document.getElementById('roleTitle').textContent = roleData.title;
+            document.getElementById('roleContent').innerHTML = `
+                <p class="text-lg font-semibold text-purple-600 mb-4">${roleData.description}</p>
+                ${roleData.content}
+            `;
+
+            document.getElementById('roleModal').classList.add('active');
+        }
+
+        function closeRoleModal(event) {
+            if (!event || event.target.id === 'roleModal') {
+                document.getElementById('roleModal').classList.remove('active');
+                selectedRole = null;
+            }
+        }
+
+        function startWithRole() {
+            if (selectedRole) {
+                alert(`Iniciando com o papel: ${roles[selectedRole].title}\n\nEm breve você será direcionado para o aplicativo!`);
+                closeRoleModal();
+                // TODO: Redirecionar para aplicativo
+            }
+        }
+
+        // Form Handlers
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('Sistema de login será integrado com Supabase');
+            closeLoginModal();
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            alert('Sistema de cadastro será integrado com Supabase');
+            closeSignupModal();
+        }
+
+        // Initialize (Supabase setup would go here)
+        console.log('Harvard In Box AI - Index Page Loaded');
+        console.log('TODO: Integrate Supabase Auth');
+    </script>
+</body>
+</html>

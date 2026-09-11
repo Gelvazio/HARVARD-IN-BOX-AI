@@ -1,21 +1,21 @@
 # 📋 TAREFAS — HARVARD-IN-BOX-AI
 
-**Última atualização**: 11-09-2026 23:45
+**Última atualização**: 12-09-2026 00:15
 
 ---
 
 ## TAREFA 01: Setup Vite + Supabase + Estrutura Base
-- **Status**: 🟡 INICIADO
+- **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 11-09-2026 23:45
-- **Data de conclusão**: —
+- **Data de conclusão**: 12-09-2026 00:15
 - **Descrição**: Configurar ambiente de desenvolvimento com Vite.js, integração Supabase, estrutura de pastas, e UI base com Tailwind CSS
 - **Subtarefas**:
   - [x] Inicializar projeto Vite
   - [x] Instalar e configurar Tailwind CSS
   - [x] Setup cliente Supabase no projeto
   - [x] Criar estrutura de pastas (src/, components/, services/, pages/)
-  - [ ] Configurar variáveis de ambiente (.env.local)
-  - [ ] Criar layout base do dashboard
+  - [x] Configurar variáveis de ambiente (.env.local)
+  - [x] Criar layout base do dashboard
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 1-2 semanas
 
@@ -287,14 +287,15 @@
 | Status | Quantidade |
 |--------|-----------|
 | 🔴 PENDENTE | 14 |
-| 🟡 INICIADO | 1 |
+| 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 0 |
+| 🟢 CONCLUÍDO | 1 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 0% (0/15)  
-**Em progresso**: 26.7% (4/15 subtarefas completadas da Tarefa 01)
+**Taxa de conclusão**: 6.7% (1/15)  
+**Tempo para primeira conclusão**: ~30 minutos  
+**Próxima**: TAREFA 02 - Schema SQL Completo
 
 ---
 

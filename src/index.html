@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harvard In Box AI - Educação Personalizada com Inteligência Artificial">
+    <meta name="author" content="Gelvazio">
+
+    <title>Harvard In Box AI - Educação Personalizada</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/css/styles.css" as="style">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='75' font-weight='bold'%3E📚%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Root App Container -->
+    <div id="app">
+        <!-- Header Navigation -->
+        <app-header></app-header>
+
+        <!-- Sidebar Menu -->
+        <app-menu></app-menu>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <div class="container">
+                <!-- Welcome Section (temporary) -->
+                <section class="py-20 text-center">
+                    <h1 class="text-5xl font-bold mb-4">
+                        <span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            Harvard In Box AI
+                        </span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Educação Personalizada com Inteligência Artificial
+                    </p>
+                    <button class="btn-primary" onclick="document.querySelector('app-menu').setActiveRole('advisor')">
+                        Comece Agora
+                    </button>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <app-footer></app-footer>
+    </div>
+
+    <!-- Loading Indicator (hidden by default) -->
+    <div id="loading-indicator" class="hidden" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    ">
+        <div class="animate-spin" style="font-size: 48px;">📚</div>
+    </div>
+
+    <!-- Main Application Script -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

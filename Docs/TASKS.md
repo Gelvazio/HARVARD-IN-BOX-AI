@@ -22,20 +22,20 @@
 ---
 
 ## TAREFA 02: Schema SQL Completo (Banco de Dados)
-- **Status**: 🟡 INICIADO
+- **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 11-09-2026 23:50
-- **Data de conclusão**: —
+- **Data de conclusão**: 11-09-2026 23:58
 - **Descrição**: Criar todas as tabelas, relacionamentos e índices no Supabase PostgreSQL
 - **Subtarefas**:
-  - [ ] Criar tabela `users`
-  - [ ] Criar tabela `courses`
-  - [ ] Criar tabela `sources`
-  - [ ] Criar tabela `sessions`
-  - [ ] Criar tabela `assignments`
-  - [ ] Criar tabela `integrations`
-  - [ ] Criar tabela `ai_preferences`
-  - [ ] Criar índices de performance
-  - [ ] Setup RLS (Row Level Security)
+  - [x] Criar tabela `users`
+  - [x] Criar tabela `courses`
+  - [x] Criar tabela `sources`
+  - [x] Criar tabela `sessions`
+  - [x] Criar tabela `assignments`
+  - [x] Criar tabela `integrations`
+  - [x] Criar tabela `ai_preferences`
+  - [x] Criar índices de performance
+  - [x] Setup RLS (Row Level Security)
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 3-5 dias
 
@@ -287,15 +287,15 @@
 | Status | Quantidade |
 |--------|-----------|
 | 🔴 PENDENTE | 13 |
-| 🟡 INICIADO | 1 |
+| 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 1 |
+| 🟢 CONCLUÍDO | 2 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 6.7% (1/15)  
-**Tempo para primeira conclusão**: ~30 minutos  
-**Próxima em progresso**: TAREFA 02 - Schema SQL Completo
+**Taxa de conclusão**: 13.3% (2/15)  
+**Tempo para conclusão de TAREFA 02**: ~8 minutos  
+**Próxima**: TAREFA 03 - Web Components Reutilizáveis
 
 ---
 

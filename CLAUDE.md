@@ -213,14 +213,65 @@ git commit -m "tasks: initiate TAREFA 01 - Setup Vite + Supabase
 
 ---
 
-## 🔄 Commit e Push Obrigatórios
+## 🔴 ⚠️ REGRA CRÍTICA: Commit e Push ao Finalizar Tarefa
 
-⚠️ **APÓS QUALQUER ATUALIZAÇÃO DE TAREFA**, execute:
+⚠️ **ABSOLUTAMENTE CRÍTICO — NUNCA PULE ISSO**:
+
+Toda vez que você **CONCLUIR uma tarefa** (status = 🟢 CONCLUÍDO):
+
+### 1️⃣ Atualizar TASKS.md
+```bash
+# Marque todas as subtarefas [x]
+# Altere status para: 🟢 CONCLUÍDO
+# Registre data/hora de conclusão: DD-MM-YYYY HH:MM
+```
+
+### 2️⃣ Fazer Commit com TASKS.md
+```bash
+git add Docs/TASKS.md
+git commit -m "tasks: complete TAREFA XX - [descrição breve]
+
+[Resumo do que foi feito]
+- Subtarefa 1 concluída
+- Subtarefa 2 concluída
+- Tempo: XX minutos
+- Taxa: X% (X/15)
+
+Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Sg2M9ia7bBDdwGpHhi3VSN"
+```
+
+### 3️⃣ Push para Repositório
+```bash
+git push -u origin claude/ola-a0561k
+```
+
+### 4️⃣ Executar Limpeza de Chat
+```bash
+/clear
+```
+
+---
+
+## 🚨 Checklist Final (Antes de Terminar Tarefa)
+
+- [ ] TASKS.md atualizado com status 🟢 CONCLUÍDO
+- [ ] Data/hora de conclusão registradas
+- [ ] Todas subtarefas marcadas [x]
+- [ ] Commit feito com mensagem descritiva
+- [ ] Push executado com sucesso
+- [ ] **Executar `/clear` para limpar contexto**
+
+---
+
+## 🔄 Commit e Push em Qualquer Mudança
+
+⚠️ **ALÉM DISSO**, após qualquer atualização de tarefa (inclusive iniciando):
 
 ```bash
 git add Docs/TASKS.md
-git commit -m "tasks: [AÇÃO] TAREFA XX"
-git push origin main
+git commit -m "tasks: [AÇÃO] TAREFA XX - descrição"
+git push -u origin claude/ola-a0561k
 ```
 
 **Sem questionar, sem pedir confirmação — sempre executar.**

@@ -224,3 +224,30 @@ git push origin main
 ```
 
 **Sem questionar, sem pedir confirmação — sempre executar.**
+
+---
+
+## 🧹 Limpeza de Chat Após Conclusão de Tarefa
+
+⚠️ **OBRIGATÓRIO**: Ao finalizar uma tarefa (status = 🟢 CONCLUÍDO):
+
+1. **Após fazer push**, execute o comando de limpeza:
+   ```bash
+   /clear
+   ```
+
+2. **Por que fazer isso?**
+   - Limpa o histórico de conversa para evitar context pollution
+   - Permite iniciar a próxima tarefa com um "chat limpo"
+   - Evita confusão entre tarefas diferentes
+   - Garante que a próxima tarefa tenha contexto fresco
+
+3. **Fluxo Completo**:
+   ```
+   1. Trabalhar na tarefa
+   2. Fazer commit e push (com TASKS.md atualizado)
+   3. Executar /clear
+   4. Aguardar novo input do usuário para próxima tarefa
+   ```
+
+**NUNCA pule esse passo — é crítico para manter a qualidade do trabalho.**

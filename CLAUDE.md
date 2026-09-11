@@ -71,3 +71,104 @@ O framework inteiro roda com um prompt de cada vez — o próximo passo é simpl
 ---
 
 *Fonte: transcrição do vídeo "How To Become Dangerously Self-Educated With AI (for free)", transcrito via TurboScribe.*
+
+---
+
+## 📋 SISTEMA DE RASTREAMENTO DE TAREFAS
+
+⚠️ **CRÍTICO**: Este projeto usa um arquivo centralizado `Docs/TASKS.md` para rastreamento de todas as atividades.
+
+### 📌 Regras Obrigatórias
+
+1. **SEMPRE verificar `Docs/TASKS.md`** antes de começar qualquer trabalho
+2. **CADA tarefa tem um status**:
+   - 🔴 **PENDENTE**: Não iniciada
+   - 🟡 **INICIADO**: Começou (registre data/hora de início)
+   - 🟠 **EM ANDAMENTO**: Sendo executada
+   - 🟢 **CONCLUÍDO**: Finalizada (registre data/hora de conclusão)
+   - ⚫ **CANCELADO**: Cancelada (justifique motivo)
+
+3. **Quando iniciar uma tarefa**:
+   ```
+   - Status: 🟡 INICIADO
+   - Data de início: DD-MM-YYYY HH:MM
+   - Fazer commit e push do arquivo TASKS.md
+   ```
+
+4. **Quando finalizar uma tarefa**:
+   ```
+   - Status: 🟢 CONCLUÍDO
+   - Data de conclusão: DD-MM-YYYY HH:MM
+   - Atualizar subtarefas (marcar com [x])
+   - Fazer commit e push
+   - Incluir no commit message: "tasks: complete TAREFA XX"
+   ```
+
+5. **Fluxo Automático Obrigatório**:
+   - ✅ Atualizar `Docs/TASKS.md` com data/hora
+   - ✅ Fazer `git add Docs/TASKS.md`
+   - ✅ Fazer `git commit -m "tasks: [AÇÃO] TAREFA XX - descrição"`
+   - ✅ Fazer `git push origin main`
+   - ✅ **NUNCA questionar, NUNCA pedir confirmação — executar sempre**
+
+### 📂 Localização do Arquivo
+
+**Arquivo**: `Docs/TASKS.md`  
+**Responsável**: Gelvazio (gelvazio@gmail.com)  
+**Atualização**: Contínua, sempre após cada ação
+
+### 🔍 Tarefas Atuais (15 total)
+
+| # | Tarefa | Status | Prioridade |
+|----|--------|--------|-----------|
+| 01 | Setup Vite + Supabase + Base | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 02 | Schema SQL Completo | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 03 | Web Components Reutilizáveis | 🔴 PENDENTE | 🟡 ALTA |
+| 04 | Advisor (Construtor de Currículo) | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 05 | Tutor (Diagnóstico de Lacunas) | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 06 | Librarian (Curador de Fontes) | 🔴 PENDENTE | 🟡 ALTA |
+| 07 | Editor (Revisão de Trabalhos) | 🔴 PENDENTE | 🟡 ALTA |
+| 08 | Companion (Perspectiva Inter.) | 🔴 PENDENTE | 🟢 MÉDIA |
+| 09 | Automação Zapier | 🔴 PENDENTE | 🟡 ALTA |
+| 10 | Discord Bot | 🔴 PENDENTE | 🟢 MÉDIA |
+| 11 | Autenticação Supabase | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 12 | AI Router (Multi-modelo) | 🔴 PENDENTE | 🔴 CRÍTICA |
+| 13 | Dashboard Principal | 🔴 PENDENTE | 🟡 ALTA |
+| 14 | Página de Perfil | 🔴 PENDENTE | 🟢 MÉDIA |
+| 15 | Testes e QA | 🔴 PENDENTE | 🟡 ALTA |
+
+**Taxa de conclusão**: 0% (0/15)
+
+### ⚡ Exemplo de Commit
+
+```bash
+git commit -m "tasks: initiate TAREFA 01 - Setup Vite + Supabase
+
+- Início: 11-09-2026 22:30
+- Status: INICIADO
+- Próximos passos: npm create vite@latest
+"
+```
+
+### ✅ Checklist ao Atualizar TASKS.md
+
+- [ ] Data/hora no formato correto (DD-MM-YYYY HH:MM)
+- [ ] Status atualizado (um de: PENDENTE, INICIADO, EM ANDAMENTO, CONCLUÍDO, CANCELADO)
+- [ ] Subtarefas marcadas com [x] quando completas
+- [ ] Resumo do progresso na tabela (Taxa de conclusão)
+- [ ] Commit com mensagem descritiva
+- [ ] Push realizado para `origin main`
+
+---
+
+## 🔄 Commit e Push Obrigatórios
+
+⚠️ **APÓS QUALQUER ATUALIZAÇÃO DE TAREFA**, execute:
+
+```bash
+git add Docs/TASKS.md
+git commit -m "tasks: [AÇÃO] TAREFA XX"
+git push origin main
+```
+
+**Sem questionar, sem pedir confirmação — sempre executar.**

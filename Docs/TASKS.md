@@ -42,8 +42,8 @@
 ---
 
 ## TAREFA 03: Web Components Reutilizáveis
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 11-09-2026 23:59
 - **Data de conclusão**: —
 - **Descrição**: Criar componentes web reutilizáveis para toda a plataforma
 - **Subtarefas**:
@@ -286,8 +286,8 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 13 |
-| 🟡 INICIADO | 0 |
+| 🔴 PENDENTE | 12 |
+| 🟡 INICIADO | 1 |
 | 🟠 EM ANDAMENTO | 0 |
 | 🟢 CONCLUÍDO | 2 |
 | ⚫ CANCELADO | 0 |
@@ -295,7 +295,7 @@
 
 **Taxa de conclusão**: 13.3% (2/15)  
 **Tempo para conclusão de TAREFA 02**: ~8 minutos  
-**Próxima**: TAREFA 03 - Web Components Reutilizáveis
+**Próxima em progresso**: TAREFA 03 - Web Components Reutilizáveis
 
 ---
 

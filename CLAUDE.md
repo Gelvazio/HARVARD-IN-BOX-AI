@@ -74,6 +74,58 @@ O framework inteiro roda com um prompt de cada vez — o próximo passo é simpl
 
 ---
 
+## 🧹 PADRÕES DE CODIFICAÇÃO — OBRIGATÓRIO
+
+⚠️ **CRÍTICO**: Este projeto segue **CODE_STANDARDS.md** RIGOROSAMENTE.
+
+### 📂 Estrutura de Código
+
+Todo código JavaScript deve ficar em `src/js/` **modularizado**:
+
+```
+src/js/
+├── core/          # Funcionalidades principais
+├── roles/         # Os 6 papéis de IA
+├── components/    # Web Components
+├── services/      # Integrações externas
+├── utils/         # Funções utilitárias
+├── hooks/         # Custom hooks
+└── main.js        # Ponto de entrada
+```
+
+### ✅ Regras Obrigatórias
+
+1. **Funções: Máximo 30 linhas** (incluindo espaços em branco)
+2. **Return Early**: Guard clauses, sem `else`
+3. **Modularização**: Cada funcionalidade em arquivo separado
+4. **Nomes**: Descritivos, use `kebab-case` com sufixo
+5. **Uma responsabilidade**: Não quebrar regra única
+6. **Máximo 3 parâmetros** por função (usar objeto se mais)
+
+### ✅ Checklist Antes de Commit
+
+- [ ] Função ≤ 30 linhas
+- [ ] Usa return early (sem else)
+- [ ] Nome descritivo (kebab-case)
+- [ ] Única responsabilidade
+- [ ] Sem hardcoded values
+- [ ] Sem console.log em produção
+- [ ] Trata erros apropriadamente
+- [ ] Imports organizados
+
+### 🚨 Infrações Críticas = Rejeitar Código
+
+- ❌ Função com >30 linhas
+- ❌ Usar `else` desnecessário
+- ❌ Nomes vagos (x, func1, arr)
+- ❌ Múltiplas responsabilidades por arquivo
+- ❌ Parâmetros > 3 sem objeto
+- ❌ Lógica complexa sem testes
+
+**Ver `CODE_STANDARDS.md` para exemplos completos e guia detalhado**
+
+---
+
 ## 📋 SISTEMA DE RASTREAMENTO DE TAREFAS
 
 ⚠️ **CRÍTICO**: Este projeto usa um arquivo centralizado `Docs/TASKS.md` para rastreamento de todas as atividades.

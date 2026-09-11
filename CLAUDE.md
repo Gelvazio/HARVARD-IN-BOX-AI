@@ -227,6 +227,64 @@ git push origin main
 
 ---
 
+## 🚀 Inicialização Automática em Nova Conversa
+
+⚠️ **OBRIGATÓRIO**: Toda vez que uma NOVA conversa inicia (ou após `/clear`):
+
+### 📋 Procedimento Automático (Execute sempre, sem exceção)
+
+1. **Ler status do projeto**:
+   ```bash
+   git fetch origin && git status
+   cat Docs/TASKS.md
+   ```
+
+2. **Analisar TASKS.md e identificar**:
+   - Qual tarefa está em progresso (🟡 INICIADO ou 🟠 EM ANDAMENTO)
+   - Qual tarefa vem em seguida (próxima 🔴 PENDENTE com maior prioridade)
+   - Qual é a taxa de conclusão atual
+   - Se há tarefas bloqueadas ou dependências
+
+3. **Mensagem de Boas-vindas Interativa**:
+   Após ler TASKS.md, exibir um resumo assim:
+   
+   ```
+   📊 Status do Projeto HARVARD-IN-BOX-AI
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   
+   ✅ Em Andamento:
+   - [Se houver] TAREFA XX: descrição
+   
+   🎯 Próximas Prioridades:
+   - TAREFA XX (CRÍTICA)
+   - TAREFA YY (ALTA)
+   
+   📈 Progresso: X/15 (XX%)
+   
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   O que fazer agora?
+   1️⃣  Continuar TAREFA XX
+   2️⃣  Começar TAREFA YY
+   3️⃣  Revisar tarefas bloqueadas
+   4️⃣  Algo específico?
+   ```
+
+4. **Aguardar input do usuário**:
+   - Se usuario escolher uma tarefa → atualizar TASKS.md (status 🟡 INICIADO) e começar
+   - Se usuario tiver outro pedido → executar e depois atualizar TASKS.md se relevante
+   - Se houver uma tarefa em andamento → retomar dela
+
+### 🔧 Implementação
+
+**Sem pedir confirmação — SEMPRE fazer isso ao iniciar uma nova conversa:**
+- ✅ Ler `Docs/TASKS.md`
+- ✅ Fazer `git fetch origin && git status`
+- ✅ Exibir resumo interativo
+- ✅ Aguardar decisão do usuário
+- ✅ Atualizar TASKS.md conforme necessário
+
+---
+
 ## 🧹 Limpeza de Chat Após Conclusão de Tarefa
 
 ⚠️ **OBRIGATÓRIO**: Ao finalizar uma tarefa (status = 🟢 CONCLUÍDO):

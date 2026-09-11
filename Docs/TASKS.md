@@ -1,19 +1,19 @@
 # 📋 TAREFAS — HARVARD-IN-BOX-AI
 
-**Última atualização**: 11-09-2026 22:00
+**Última atualização**: 11-09-2026 23:45
 
 ---
 
 ## TAREFA 01: Setup Vite + Supabase + Estrutura Base
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 11-09-2026 23:45
 - **Data de conclusão**: —
 - **Descrição**: Configurar ambiente de desenvolvimento com Vite.js, integração Supabase, estrutura de pastas, e UI base com Tailwind CSS
 - **Subtarefas**:
-  - [ ] Inicializar projeto Vite
-  - [ ] Instalar e configurar Tailwind CSS
-  - [ ] Setup cliente Supabase no projeto
-  - [ ] Criar estrutura de pastas (src/, components/, services/, pages/)
+  - [x] Inicializar projeto Vite
+  - [x] Instalar e configurar Tailwind CSS
+  - [x] Setup cliente Supabase no projeto
+  - [x] Criar estrutura de pastas (src/, components/, services/, pages/)
   - [ ] Configurar variáveis de ambiente (.env.local)
   - [ ] Criar layout base do dashboard
 - **Prioridade**: 🔴 CRÍTICA
@@ -286,14 +286,15 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 15 |
-| 🟡 INICIADO | 0 |
+| 🔴 PENDENTE | 14 |
+| 🟡 INICIADO | 1 |
 | 🟠 EM ANDAMENTO | 0 |
 | 🟢 CONCLUÍDO | 0 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 0% (0/15)
+**Taxa de conclusão**: 0% (0/15)  
+**Em progresso**: 26.7% (4/15 subtarefas completadas da Tarefa 01)
 
 ---
 

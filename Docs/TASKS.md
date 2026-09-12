@@ -1,6 +1,6 @@
 # 📋 TAREFAS — HARVARD-IN-BOX-AI
 
-**Última atualização**: 12-09-2026 01:05
+**Última atualização**: 12-09-2026 01:40
 
 ---
 
@@ -184,18 +184,18 @@
 ---
 
 ## TAREFA 11: Autenticação Supabase (Email/Senha)
-- **Status**: 🟡 INICIADO
+- **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 12-09-2026 01:08
-- **Data de conclusão**: —
+- **Data de conclusão**: 12-09-2026 01:40
 - **Descrição**: Implementar sistema completo de autenticação com Supabase Auth
 - **Subtarefas**:
-  - [ ] Página de signup
-  - [ ] Página de login
-  - [ ] Recuperação de senha
-  - [ ] Verificação de email
-  - [ ] Sessão persistente
-  - [ ] Logout
-  - [ ] Redirecionamento de usuários não autenticados
+  - [x] Página de signup
+  - [x] Página de login
+  - [x] Recuperação de senha
+  - [x] Verificação de email
+  - [x] Sessão persistente
+  - [x] Logout
+  - [x] Redirecionamento de usuários não autenticados
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 1 semana
 
@@ -286,16 +286,16 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 9 |
+| 🔴 PENDENTE | 8 |
 | 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 5 |
+| 🟢 CONCLUÍDO | 6 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 33.3% (5/15)  
-**Tempo para conclusão de TAREFA 05**: ~23 minutos (chat + diagnóstico + testes)  
-**Próxima**: TAREFA 11 - Autenticação Supabase 🔴 CRÍTICA (bloqueia outras funcionalidades)
+**Taxa de conclusão**: 40% (6/15)  
+**Tempo para conclusão de TAREFA 11**: ~32 minutos (auth completo + testes)  
+**Próxima**: TAREFA 12 - AI Router Multi-modelo 🔴 CRÍTICA (necessário para todos os papéis)
 
 ---
 

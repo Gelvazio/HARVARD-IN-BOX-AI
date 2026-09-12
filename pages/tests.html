@@ -123,8 +123,10 @@
 
     <div class="controls">
       <button class="btn btn-primary" id="runAllBtn">▶ Executar Todos</button>
-      <button class="btn btn-secondary" id="runAdvisorBtn">▶ Testes Advisor</button>
-      <button class="btn btn-secondary" id="runIntegrationBtn">▶ Testes Integração</button>
+      <button class="btn btn-secondary" id="runAdvisorBtn">▶ Advisor</button>
+      <button class="btn btn-secondary" id="runTutorBtn">▶ Tutor</button>
+      <button class="btn btn-secondary" id="runAuthBtn">▶ Auth</button>
+      <button class="btn btn-secondary" id="runIntegrationBtn">▶ Integração</button>
     </div>
 
     <div id="testSuites"></div>
@@ -141,6 +143,8 @@
   <script type="module">
     import { AdvisorTests } from '../src/tests/advisor.test.js';
     import { IntegrationTests } from '../src/tests/integration.test.js';
+    import { TutorTests } from '../src/tests/tutor.test.js';
+    import { AuthTests } from '../src/tests/auth.test.js';
 
     const consoleOutput = document.getElementById('consoleOutput');
     const testSuitesContainer = document.getElementById('testSuites');
@@ -192,12 +196,22 @@
       runTests(AdvisorTests, '🎯 Testes Advisor');
     });
 
+    document.getElementById('runTutorBtn').addEventListener('click', () => {
+      runTests(TutorTests, '🎓 Testes Tutor');
+    });
+
+    document.getElementById('runAuthBtn').addEventListener('click', () => {
+      runTests(AuthTests, '🔐 Testes Autenticação');
+    });
+
     document.getElementById('runIntegrationBtn').addEventListener('click', () => {
       runTests(IntegrationTests, '🔗 Testes de Integração');
     });
 
     document.getElementById('runAllBtn').addEventListener('click', async () => {
       await runTests(AdvisorTests, '🎯 Testes Advisor');
+      await runTests(TutorTests, '🎓 Testes Tutor');
+      await runTests(AuthTests, '🔐 Testes Autenticação');
       await runTests(IntegrationTests, '🔗 Testes de Integração');
     });
 

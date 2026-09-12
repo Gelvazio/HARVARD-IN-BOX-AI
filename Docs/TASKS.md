@@ -97,8 +97,8 @@
 ---
 
 ## TAREFA 06: Librarian (Curador de Fontes)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 12-09-2026 00:45
 - **Data de conclusão**: —
 - **Descrição**: Implementar o papel Librarian com integração NotebookLM
 - **Subtarefas**:
@@ -286,8 +286,8 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 7 |
-| 🟡 INICIADO | 0 |
+| 🔴 PENDENTE | 6 |
+| 🟡 INICIADO | 1 |
 | 🟠 EM ANDAMENTO | 0 |
 | 🟢 CONCLUÍDO | 7 |
 | ⚫ CANCELADO | 0 |
@@ -295,7 +295,7 @@
 
 **Taxa de conclusão**: 47% (7/15)  
 **Tempo para conclusão de TAREFA 12**: ~18 minutos (router completo + testes + docs)  
-**Próxima**: TAREFA 06 - Librarian 🟡 ALTA (curador de fontes com NotebookLM)
+**Próxima em progresso**: TAREFA 06 - Librarian 🟡 ALTA (curador de fontes com NotebookLM)
 
 ---
 

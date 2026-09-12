@@ -61,16 +61,16 @@
 ---
 
 ## TAREFA 04: Advisor (Construtor de Currículo)
-- **Status**: 🟡 INICIADO
+- **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 12-09-2026 00:20
-- **Data de conclusão**: —
+- **Data de conclusão**: 12-09-2026 00:35
 - **Descrição**: Implementar o papel Advisor que constrói currículo personalizado
 - **Subtarefas**:
-  - [ ] Criar fluxo de entrevista (5 perguntas)
-  - [ ] Integrar com AI (Claude/GPT/Gemini router)
-  - [ ] Salvar curso e respostas em Supabase
-  - [ ] Gerar milestones semanais automaticamente
-  - [ ] Criar página `new-course.html`
+  - [x] Criar fluxo de entrevista (5 perguntas)
+  - [x] Integrar com AI (Claude/GPT/Gemini router)
+  - [x] Salvar curso e respostas em Supabase
+  - [x] Gerar milestones semanais automaticamente
+  - [x] Criar página `new-course.html`
   - [ ] Integração com Zapier (conectar Google Calendar)
   - [ ] Testes de funcionamento
 - **Prioridade**: 🔴 CRÍTICA
@@ -286,16 +286,16 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 11 |
-| 🟡 INICIADO | 1 |
+| 🔴 PENDENTE | 10 |
+| 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 3 |
+| 🟢 CONCLUÍDO | 4 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 20% (3/15)  
-**Tempo para conclusão de TAREFA 03**: ~16 minutos  
-**Próxima em progresso**: TAREFA 04 - Advisor (Construtor de Currículo)
+**Taxa de conclusão**: 26.7% (4/15)  
+**Tempo para conclusão de TAREFA 04**: ~15 minutos  
+**Próxima**: TAREFA 05 - Tutor (Diagnóstico de Lacunas)
 
 ---
 

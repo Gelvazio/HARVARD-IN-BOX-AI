@@ -61,8 +61,8 @@
 ---
 
 ## TAREFA 04: Advisor (Construtor de Currículo)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 12-09-2026 00:20
 - **Data de conclusão**: —
 - **Descrição**: Implementar o papel Advisor que constrói currículo personalizado
 - **Subtarefas**:
@@ -286,8 +286,8 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 12 |
-| 🟡 INICIADO | 0 |
+| 🔴 PENDENTE | 11 |
+| 🟡 INICIADO | 1 |
 | 🟠 EM ANDAMENTO | 0 |
 | 🟢 CONCLUÍDO | 3 |
 | ⚫ CANCELADO | 0 |
@@ -295,7 +295,7 @@
 
 **Taxa de conclusão**: 20% (3/15)  
 **Tempo para conclusão de TAREFA 03**: ~16 minutos  
-**Próxima**: TAREFA 04 - Advisor (Construtor de Currículo)
+**Próxima em progresso**: TAREFA 04 - Advisor (Construtor de Currículo)
 
 ---
 

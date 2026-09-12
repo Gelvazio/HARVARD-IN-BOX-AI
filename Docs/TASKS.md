@@ -1,6 +1,6 @@
 # 📋 TAREFAS — HARVARD-IN-BOX-AI
 
-**Última atualização**: 12-09-2026 00:15
+**Última atualização**: 12-09-2026 00:40
 
 ---
 
@@ -63,7 +63,7 @@
 ## TAREFA 04: Advisor (Construtor de Currículo)
 - **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 12-09-2026 00:20
-- **Data de conclusão**: 12-09-2026 00:35
+- **Data de conclusão**: 12-09-2026 00:40
 - **Descrição**: Implementar o papel Advisor que constrói currículo personalizado
 - **Subtarefas**:
   - [x] Criar fluxo de entrevista (5 perguntas)
@@ -71,8 +71,8 @@
   - [x] Salvar curso e respostas em Supabase
   - [x] Gerar milestones semanais automaticamente
   - [x] Criar página `new-course.html`
-  - [ ] Integração com Zapier (conectar Google Calendar)
-  - [ ] Testes de funcionamento
+  - [x] Integração com Zapier (conectar Google Calendar)
+  - [x] Testes de funcionamento
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 2-3 semanas
 
@@ -294,8 +294,8 @@
 | **TOTAL** | **15** |
 
 **Taxa de conclusão**: 26.7% (4/15)  
-**Tempo para conclusão de TAREFA 04**: ~15 minutos  
-**Próxima**: TAREFA 05 - Tutor (Diagnóstico de Lacunas)
+**Tempo para conclusão de TAREFA 04**: ~20 minutos (com Zapier + testes)  
+**Próxima**: TAREFA 05 - Tutor (Diagnóstico de Lacunas) 🔴 CRÍTICA
 
 ---
 

@@ -202,18 +202,18 @@
 ---
 
 ## TAREFA 12: AI Router (Multi-modelo)
-- **Status**: 🟡 INICIADO
+- **Status**: 🟢 CONCLUÍDO
 - **Data de início**: 12-09-2026 00:29
-- **Data de conclusão**: —
+- **Data de conclusão**: 12-09-2026 00:47
 - **Descrição**: Criar sistema de roteamento que permite usuário escolher Claude/GPT/Gemini
 - **Subtarefas**:
-  - [ ] Integração Claude API
-  - [ ] Integração OpenAI API
-  - [ ] Integração Google Gemini API
-  - [ ] Seleção de modelo por usuário
-  - [ ] Armazenamento seguro de chaves API
-  - [ ] Fallback automático se uma API falhar
-  - [ ] Testes com todos os modelos
+  - [x] Integração Claude API
+  - [x] Integração OpenAI API
+  - [x] Integração Google Gemini API
+  - [x] Seleção de modelo por usuário
+  - [x] Armazenamento seguro de chaves API
+  - [x] Fallback automático se uma API falhar
+  - [x] Testes com todos os modelos
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 1-2 semanas
 
@@ -286,16 +286,16 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 8 |
+| 🔴 PENDENTE | 7 |
 | 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 6 |
+| 🟢 CONCLUÍDO | 7 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 40% (6/15)  
-**Tempo para conclusão de TAREFA 11**: ~32 minutos (auth completo + testes)  
-**Próxima**: TAREFA 12 - AI Router Multi-modelo 🔴 CRÍTICA (necessário para todos os papéis)
+**Taxa de conclusão**: 47% (7/15)  
+**Tempo para conclusão de TAREFA 12**: ~18 minutos (router completo + testes + docs)  
+**Próxima**: TAREFA 06 - Librarian 🟡 ALTA (curador de fontes com NotebookLM)
 
 ---
 

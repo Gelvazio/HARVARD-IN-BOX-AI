@@ -202,8 +202,8 @@
 ---
 
 ## TAREFA 12: AI Router (Multi-modelo)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 12-09-2026 00:29
 - **Data de conclusão**: —
 - **Descrição**: Criar sistema de roteamento que permite usuário escolher Claude/GPT/Gemini
 - **Subtarefas**:

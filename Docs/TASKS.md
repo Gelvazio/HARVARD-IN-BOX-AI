@@ -184,8 +184,8 @@
 ---
 
 ## TAREFA 11: Autenticação Supabase (Email/Senha)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
+- **Status**: 🟡 INICIADO
+- **Data de início**: 12-09-2026 01:08
 - **Data de conclusão**: —
 - **Descrição**: Implementar sistema completo de autenticação com Supabase Auth
 - **Subtarefas**:

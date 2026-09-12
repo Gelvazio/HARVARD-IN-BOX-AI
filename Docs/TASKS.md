@@ -1,6 +1,6 @@
 # 📋 TAREFAS — HARVARD-IN-BOX-AI
 
-**Última atualização**: 12-09-2026 00:40
+**Última atualização**: 12-09-2026 01:05
 
 ---
 
@@ -79,18 +79,18 @@
 ---
 
 ## TAREFA 05: Tutor (Diagnóstico de Lacunas)
-- **Status**: ⏳ PENDENTE
-- **Data de início**: —
-- **Data de conclusão**: —
+- **Status**: 🟢 CONCLUÍDO
+- **Data de início**: 12-09-2026 00:42
+- **Data de conclusão**: 12-09-2026 01:05
 - **Descrição**: Implementar o papel Tutor com chat diagnóstico inteligente
 - **Subtarefas**:
-  - [ ] Criar componente chat com histórico
-  - [ ] Implementar AI router (Claude/GPT/Gemini)
-  - [ ] Sistema de prompts diagnósticos
-  - [ ] Salvar sessões em banco de dados
-  - [ ] Criar página `study.html` com chat
+  - [x] Criar componente chat com histórico
+  - [x] Implementar AI router (Claude/GPT/Gemini)
+  - [x] Sistema de prompts diagnósticos
+  - [x] Salvar sessões em banco de dados
+  - [x] Criar página `study.html` com chat
   - [ ] Modo voz (opcional)
-  - [ ] Testes de qualidade da tutoria
+  - [x] Testes de qualidade da tutoria
 - **Prioridade**: 🔴 CRÍTICA
 - **Estimativa**: 3-4 semanas
 
@@ -286,16 +286,16 @@
 
 | Status | Quantidade |
 |--------|-----------|
-| 🔴 PENDENTE | 10 |
+| 🔴 PENDENTE | 9 |
 | 🟡 INICIADO | 0 |
 | 🟠 EM ANDAMENTO | 0 |
-| 🟢 CONCLUÍDO | 4 |
+| 🟢 CONCLUÍDO | 5 |
 | ⚫ CANCELADO | 0 |
 | **TOTAL** | **15** |
 
-**Taxa de conclusão**: 26.7% (4/15)  
-**Tempo para conclusão de TAREFA 04**: ~20 minutos (com Zapier + testes)  
-**Próxima**: TAREFA 05 - Tutor (Diagnóstico de Lacunas) 🔴 CRÍTICA
+**Taxa de conclusão**: 33.3% (5/15)  
+**Tempo para conclusão de TAREFA 05**: ~23 minutos (chat + diagnóstico + testes)  
+**Próxima**: TAREFA 11 - Autenticação Supabase 🔴 CRÍTICA (bloqueia outras funcionalidades)
 
 ---
 
